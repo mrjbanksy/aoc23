@@ -110,7 +110,7 @@ public class Day7 extends DayBase {
                 return HandType.FIVE_OF_A_KIND;
             } else if (filteredCardMap.values().stream().anyMatch(v -> v + jokerCount == 4)) {
                 return HandType.FOUR_OF_A_KIND;
-            } else if (sortedCardCount.get(0) + sortedCardCount.get(1) + jokerCount == 5) {
+            } else if (sortedCardCount.get(sortedCardCount.size() - 1) + sortedCardCount.get(sortedCardCount.size() - 2) + jokerCount == 5) {
                 return HandType.FULL_HOUSE;
             } else if (filteredCardMap.values().stream().anyMatch(v -> v + jokerCount == 3)) {
                 return HandType.THREE_OF_A_KIND;
